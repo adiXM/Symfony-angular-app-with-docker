@@ -15,7 +15,6 @@ class SecurityController extends AbstractController
         if ($content = $request->getContent()) {
             $parametersAsArray = json_decode($content, true);
         }
-
         return $this->json([
             //'user' => $this->getUser() ? $this->getUser()->getId() : null]
             'result' => $parametersAsArray]
