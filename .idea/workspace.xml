@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4ea979bb-a85a-4cff-8c94-a3b92cb83361" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/game_project/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/game_project/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/game_project/vendor/webimpress/safe-writer" />
+      <path value="$PROJECT_DIR$/game_project/vendor/composer" />
+      <path value="$PROJECT_DIR$/game_project/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/game_project/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/game_project/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/game_project/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/game_project/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/game_project/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/game_project/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/game_project/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/game_project/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/game_project/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/game_project/vendor/symfony/security-bundle" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1kBsvOR4vPklpGdBPWQFWB8UciV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\Andra\Desktop\Game Project\angular\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andra\Desktop\Game Project" />
+      <recent name="C:\Users\Andra\Desktop\Game Project\.docker" />
+      <recent name="C:\Users\Andra\Desktop\Game Project\.docker\nginx\conf.d" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yml.php: Compose Deployment">
+    <configuration name="docker-compose.yml.mysql: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mysql" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.php: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="php" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.phpmyadmin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="phpmyadmin" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.php: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.phpmyadmin: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ea979bb-a85a-4cff-8c94-a3b92cb83361" name="Default Changelist" comment="" />
+      <created>1605185550507</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605185550507</updated>
+      <workItem from="1605185551961" duration="661000" />
+      <workItem from="1605189373844" duration="18854000" />
+      <workItem from="1605262789175" duration="4105000" />
+      <workItem from="1605285307248" duration="17009000" />
+      <workItem from="1605351684816" duration="786000" />
+      <workItem from="1605352777397" duration="17778000" />
+      <workItem from="1605433537547" duration="37250000" />
+      <workItem from="1605665410310" duration="3096000" />
+      <workItem from="1605696489817" duration="17616000" />
+      <workItem from="1605781617349" duration="9850000" />
+      <workItem from="1605817384014" duration="14068000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="434" y="188" key="#Notifications" timestamp="1605353217707">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="434" y="188" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1605353217707" />
+    <state x="390" y="7" key="#PHP" timestamp="1605353239168">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="7" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1605353239168" />
+    <state x="440" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605265691170">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="440" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1605265691170" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605472097005">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605472097005" />
+    <state x="733" y="394" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1605818255749">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="394" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/-3286.587.1366.728/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1605818255749" />
+    <state width="938" height="230" key="GridCell.Tab.0.bottom" timestamp="1605668716465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="230" key="GridCell.Tab.0.bottom/-1366.580.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1605668716465" />
+    <state width="938" height="230" key="GridCell.Tab.0.center" timestamp="1605668716465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="230" key="GridCell.Tab.0.center/-1366.580.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1605668716465" />
+    <state width="938" height="230" key="GridCell.Tab.0.left" timestamp="1605668716465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="230" key="GridCell.Tab.0.left/-1366.580.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1605668716465" />
+    <state width="938" height="230" key="GridCell.Tab.0.right" timestamp="1605668716465">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="230" key="GridCell.Tab.0.right/-1366.580.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1605668716465" />
+    <state x="682" y="243" key="NewPhpClassDialog" timestamp="1605836385844">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="682" y="243" key="NewPhpClassDialog/-3286.587.1366.728/0.0.1920.1040/-1920.7.1920.1040@0.0.1920.1040" timestamp="1605836385844" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1605663803819">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/-1366.580.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1605663803819" />
+    <state x="42" y="74" width="1236" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605802276466">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="59" y="106" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1366.580.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1605666092350" />
+    <state x="42" y="74" width="1236" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1605802276466" />
+    <state x="667" y="76" width="651" height="888" key="find.popup" timestamp="1605745222319">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="76" width="651" height="888" key="find.popup/-1366.580.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1605745222319" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1605808605908">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="476" y="231" key="run.anything.popup/-1366.580.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1605306278184" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1605808605908" />
+  </component>
+</project>
