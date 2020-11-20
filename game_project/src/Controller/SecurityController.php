@@ -7,13 +7,18 @@ use Symfony\Component\Routing\Annotation\Route;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/api/login", name="app_login", methods={"POST"})
+     * @Route("login", name="app_login", methods={"POST"})
      */
-    public function login()
+    public function login(Request $request)
     {
-        $x = 0;
+        $parametersAsArray = [];
+        if ($content = $request->getContent()) {
+            $parametersAsArray = json_decode($content, true);
+        }
+
         return $this->json([
-            'user' => $this->getUser() ? $this->getUser()->getId() : null]
+            //'user' => $this->getUser() ? $this->getUser()->getId() : null]
+            'result' => $parametersAsArray]
         );
     }
 }
