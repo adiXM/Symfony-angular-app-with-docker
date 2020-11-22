@@ -1,0 +1,18 @@
+<div class="container">
+
+  <h1>New game</h1>
+  <div class="form-group">
+    <label>Game name</label>
+    <input [(ngModel)]="gameData.name"  type="text" class="form-control" placeholder="Game Name">
+  </div>
+  <div class="form-group">
+    <label>Game description</label>
+    <input [(ngModel)]="gameData.description" type="text" class="form-control" placeholder="Game description">
+  </div>
+  <div class="form-group">
+    <label>Store</label>
+    <input [(ngModel)]="gameData.store" type="text" class="form-control"  placeholder="Store">
+  </div>
+  <button (click)="createNewGame();" type="submit" class="btn btn-primary">Submit</button>
+
+</div>
