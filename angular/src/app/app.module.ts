@@ -7,12 +7,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditgameComponent } from './editgame/editgame.component';
 import {FormsModule} from "@angular/forms";
 import {AppComponent} from "./app.component";
+import { LoginComponent } from './login/login.component';
+import { NewGameComponent } from './new-game/new-game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponentComponent,
-    EditgameComponent
+    EditgameComponent,
+    LoginComponent,
+    NewGameComponent,
   ],
   imports: [
     BrowserModule,

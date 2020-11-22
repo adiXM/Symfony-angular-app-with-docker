@@ -27,18 +27,25 @@ class GamesService
     {
         return $this->em->getRepository(Game::class)->find($id);
     }
-    public function updateGame($id, $request)
+    public function updateGame($id, $params)
     {
-        print_r($request);
-        header("Access-Control-Allow-Origin: *");
+        //print_r($request);
         $myGame = $this->em->getRepository(Game::class)->find($id);
         if(!$myGame) {
             throw $this->createNotFoundException(
                 'No product found for id '.$id
             );
         }
-        $myGame->setName("test");
+        $myGame->setName($params['name']);
+        $myGame->setDescription($params['description']);
+        $myGame->setStore($params['store']);
         $this->em->flush();
-
     }
+    public function newGame($game)
+    {
+        $this->em->persist($game);
+        $this->em->flush();
+    }
+
+
 }

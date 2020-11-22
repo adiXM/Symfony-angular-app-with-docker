@@ -10,6 +10,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use App\Service\GamesService;
 use App\Entity\Game;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 
 class GameController extends AbstractController
@@ -17,11 +18,20 @@ class GameController extends AbstractController
 
     private $serializer;
     private $gamesService;
-
-    public function __construct(GamesService $gamesService, SerializerInterface $serializer)
+    private $tokenStorage;
+    public function __construct(GamesService $gamesService, SerializerInterface $serializer, TokenStorageInterface $tokenStorage)
     {
         $this->serializer = $serializer;
         $this->gamesService = $gamesService;
+        $this->tokenStorage = $tokenStorage;
+    }
+
+    /**
+     * @Route("/", name="index")
+     */
+    public function index(Request $request)
+    {
+        return new Response("<html><body>Debug data</body></html>".$request->getSession()->getId());
     }
     /**
      * @Route("api/get_games", name="get_games")
@@ -52,7 +62,21 @@ class GameController extends AbstractController
      */
     public function updateGame($id, Request $request) : Response
     {
-        //$this->gamesService->updateGame($id, $request);
+        $params = $request->request->all();
+        $this->gamesService->updateGame($id, $params);
         return (new JsonResponse())->setContent($this->serializer->serialize($request, 'json'));
+    }
+    /**
+     * @Route("api/new_game", name="new_game", methods={"POST"})
+     */
+    public function newGame(Request $request) : Response
+    {
+        $params = $request->request->all();
+        $game = new Game();
+        $game->setName($params['name']);
+        $game->setDescription($params["description"]);
+        $game->setStore($params["store"]);
+        $this->gamesService->newGame($game);
+        return (new JsonResponse())->setContent($this->serializer->serialize($params, 'json'));
     }
 }

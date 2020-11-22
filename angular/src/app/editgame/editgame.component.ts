@@ -21,9 +21,8 @@ export class EditgameComponent implements OnInit {
     });
   }
   updateGame(): void {
-    debugger;
     console.log(this.gameData);
-    this.gameService.updateGame("update_game",this.route.snapshot.params.id, JSON.stringify(this.gameData)).subscribe((result) => {
+    this.gameService.updateGame("update_game",this.route.snapshot.params.id, this.gameData).subscribe((result) => {
       this.router.navigate(['/home/']);
     }, (err) => {
       console.log(err);

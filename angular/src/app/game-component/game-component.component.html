@@ -1,45 +1,50 @@
+
 <div class="container">
 
   <h1>{{title}}</h1>
+  <div class="header">
+    <div class="row">
+      <button routerLink="/login" class="btn btn-sm btn-secondary btn-default">Login</button>
+      <button routerLink="/new-game" class="ml-auto btn btn-sm btn-primary btn-default">Create new game</button>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-md-12">
+      <div class="all-games">
 
-  <div class="col-md-12">
-    <div class="all-games">
-
-
-      <div class="loader" *ngIf="loadingMask == 'show'">
-        <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
+        <div class="loader" *ngIf="loadingMask == 'show'">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
+        <table class="table table-hover table-stripped" id="tasks-list" *ngIf="games && games.length >= 1">
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Store</th>
+            <th>No. players</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor="let game of games" class="">
+            <td>
+                {{game.name}}
+            </td>
+            <td>
+                {{game.description}}
+            </td>
+            <td>
+              {{game.store}}
+            </td>
+            <td>5</td>
+            <td>
+              <button (click)="removeGame(game.id);" class="btn btn-sm btn-primary btn-default mr-1">Remove</button>
+              <button routerLink="/edit-game/{{game.id}}" class="btn btn-sm btn-secondary btn-default">Edit</button>
+            </td>
+          </tr>
+        </table>
+
       </div>
-
-      <table class="table table-hover table-stripped" id="tasks-list" *ngIf="games && games.length >= 1">
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Store</th>
-          <th>No. players</th>
-          <th>Actions</th>
-        </tr>
-        <tr *ngFor="let game of games" class="">
-          <td>
-							{{game.name}}
-          </td>
-          <td>
-              {{game.description}}
-          </td>
-          <td>
-            {{game.store}}
-          </td>
-          <td>5</td>
-          <td>
-            <button (click)="removeGame(game.id);" class="btn btn-sm btn-primary btn-default">Remove</button>
-
-            <button routerLink="/edit-game/{{game.id}}" class="btn btn-sm btn-secondary btn-default">Edit</button>
-          </td>
-        </tr>
-      </table>
-
     </div>
   </div>
 </div>
