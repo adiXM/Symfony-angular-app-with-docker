@@ -14,11 +14,13 @@ export class GameComponentComponent implements OnInit {
   public loadingMask;
   public notification = '';
 
-  constructor(private gameService: ApigameService, private route: ActivatedRoute) {
+  constructor(private gameService: ApigameService, private route: Router) {
     this.title = "Game Project"
     this.loadingMask = "hide";
-    this.notification = "success";
-    //this.route.snapshot.params['notification']
+    debugger;
+    if(window.history.state.notification !== undefined) {
+      this.notification = window.history.state.notification;
+    }
   }
 
   ngOnInit(): void {
@@ -37,6 +39,7 @@ export class GameComponentComponent implements OnInit {
           this.getAllGames();
         }, (err) => {
           console.log(err);
+          this.notification = "You ar not logged or logged in as administrator";
         }
       );
   }

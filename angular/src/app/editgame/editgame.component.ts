@@ -21,16 +21,19 @@ export class EditgameComponent implements OnInit {
       this.gameData = data;
     }, (err) => {
       console.log(err);
-      const data = {notification : "Success!"};
-      this.router.navigate(['/home/', JSON.stringify(data)]);
+      const notif = {notification : "You ar not logged or logged in as administrator"};
+      this.router.navigate(['/home/'], {state: notif});
     })
   }
   updateGame(): void {
     console.log(this.gameData);
     this.gameService.updateGame("update_game",this.route.snapshot.params.id, this.gameData).subscribe((result) => {
-      this.router.navigate(['/home/']);
+      const notif = {notification : "Success!"};
+      this.router.navigate(['/home/'], {state: notif});
     }, (err) => {
       console.log(err);
+      const notif = {notification : "You ar not logged or logged in as administrator"};
+      this.router.navigate(['/home/'], {state: notif});
     });
   }
 

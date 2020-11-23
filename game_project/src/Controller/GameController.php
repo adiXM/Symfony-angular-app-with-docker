@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Events\NewGameEvent;
+use App\Service\ValidatorService;
 use GameListener;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,17 +26,20 @@ class GameController extends AbstractController
     private $tokenStorage;
     private $passwordEncoder;
     private $dispatcher;
+    private $validator;
     public function __construct(GamesService $gamesService,
                                 SerializerInterface $serializer,
                                 TokenStorageInterface $tokenStorage,
                                 UserPasswordEncoderInterface $passwordEncoder,
-                                EventDispatcherInterface $dispatcher)
+                                EventDispatcherInterface $dispatcher,
+                                ValidatorService $validator)
     {
         $this->serializer = $serializer;
         $this->gamesService = $gamesService;
         $this->tokenStorage = $tokenStorage;
         $this->passwordEncoder = $passwordEncoder;
         $this->dispatcher = $dispatcher;
+        $this->validator = $validator;
     }
 
     /**
@@ -75,6 +79,11 @@ class GameController extends AbstractController
     public function updateGame($id, Request $request) : Response
     {
         $params = $request->request->all();
+        foreach ($params as $value) {
+            if(!$this->validator->validate($value)) {
+                return new Response($this->validator->getViolationsMessage());
+            }
+        }
         $this->gamesService->updateGame($id, $params);
         return (new JsonResponse())->setContent($this->serializer->serialize($request, 'json'));
     }
@@ -84,16 +93,21 @@ class GameController extends AbstractController
     public function newGame(Request $request) : Response
     {
         $params = $request->request->all();
+        foreach ($params as $value) {
+            if(!$this->validator->validate($value)) {
+                return new Response($this->validator->getViolationsMessage());
+            }
+        }
         $game = new Game();
         $game->setName($params['name']);
         $game->setDescription($params["description"]);
         $game->setStore($params["store"]);
 
+        //I will generate a random value for number of players
         $event = new NewGameEvent($game);
         $listener = new GameListener();
         $this->dispatcher->addListener(NewGameEvent::NAME, array($listener, 'onCreatedNewGameAction'));
         $this->dispatcher->dispatch($event, NewGameEvent::NAME);
-
 
         $this->gamesService->newGame($game);
 
@@ -104,6 +118,7 @@ class GameController extends AbstractController
      */
     public function generateDummyData(Request $request) : Response
     {
+        //generate admin user to make tests
         $user = new User();
         $user->setUsername("administrator");
         $user->setPassword($this->passwordEncoder->encodePassword($user,"123456"));
