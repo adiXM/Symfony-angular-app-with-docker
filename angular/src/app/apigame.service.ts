@@ -32,13 +32,13 @@ export class ApigameService {
   }
 
   public getGame(endpoint: string, id: string) {
-    return this.httpClient.get(this.REST_API_SERVER + endpoint + "/" + id).pipe(
+    return this.httpClient.get(this.REST_API_SERVER + endpoint + "/" + id, {withCredentials: true}).pipe(
       catchError(this.handleError)
     );
   }
 
   public removeGame(endpoint: string, id : string) {
-    return this.httpClient.delete(this.REST_API_SERVER + endpoint + "/" + id).pipe(
+    return this.httpClient.delete(this.REST_API_SERVER + endpoint + "/" + id, {withCredentials: true}).pipe(
       catchError(this.handleError)
     );
   }
@@ -47,7 +47,7 @@ export class ApigameService {
       .set('name', game.name)
       .set('description', game.description)
       .set('store', game.store);
-    return this.httpClient.put(this.REST_API_SERVER + endpoint + "/" + id, params).pipe(
+    return this.httpClient.post(this.REST_API_SERVER + endpoint + "/" + id, params, {withCredentials: true}).pipe(
       catchError(this.handleError)
     );
   }

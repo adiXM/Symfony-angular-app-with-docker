@@ -21,7 +21,7 @@ class UserAuthAuthenticator extends AbstractGuardAuthenticator
     private $security;
     private $serializer;
 
-    public function __construct(UserPasswordEncoderInterface  $passwordEncoder, Security $security,  SerializerInterface $serializer)
+    public function __construct(UserPasswordEncoderInterface $passwordEncoder, Security $security,  SerializerInterface $serializer)
     {
         $this->passwordEncoder = $passwordEncoder;
         $this->security = $security;

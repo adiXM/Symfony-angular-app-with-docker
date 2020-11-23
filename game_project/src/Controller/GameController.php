@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Events\NewGameEvent;
+use GameListener;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,7 +14,8 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Service\GamesService;
 use App\Entity\Game;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class GameController extends AbstractController
 {
@@ -19,11 +23,19 @@ class GameController extends AbstractController
     private $serializer;
     private $gamesService;
     private $tokenStorage;
-    public function __construct(GamesService $gamesService, SerializerInterface $serializer, TokenStorageInterface $tokenStorage)
+    private $passwordEncoder;
+    private $dispatcher;
+    public function __construct(GamesService $gamesService,
+                                SerializerInterface $serializer,
+                                TokenStorageInterface $tokenStorage,
+                                UserPasswordEncoderInterface $passwordEncoder,
+                                EventDispatcherInterface $dispatcher)
     {
         $this->serializer = $serializer;
         $this->gamesService = $gamesService;
         $this->tokenStorage = $tokenStorage;
+        $this->passwordEncoder = $passwordEncoder;
+        $this->dispatcher = $dispatcher;
     }
 
     /**
@@ -34,7 +46,7 @@ class GameController extends AbstractController
         return new Response("<html><body>Debug data</body></html>".$request->getSession()->getId());
     }
     /**
-     * @Route("api/get_games", name="get_games")
+     * @Route("api/get_games", name="get_games", methods={"GET"})
      */
     public function getGames(): Response
     {
@@ -50,7 +62,7 @@ class GameController extends AbstractController
         return new Response();
     }
     /**
-     * @Route("api/get_game/{id}", name="get_game")
+     * @Route("api/get_game/{id}", name="get_game", methods={"GET"})
      */
     public function getGame($id) : Response
     {
@@ -58,7 +70,7 @@ class GameController extends AbstractController
         return (new JsonResponse())->setContent($this->serializer->serialize($outputGame, 'json'));
     }
     /**
-     * @Route("api/update_game/{id}", name="update_game")
+     * @Route("api/update_game/{id}", name="update_game", methods={"POST"})
      */
     public function updateGame($id, Request $request) : Response
     {
@@ -76,7 +88,27 @@ class GameController extends AbstractController
         $game->setName($params['name']);
         $game->setDescription($params["description"]);
         $game->setStore($params["store"]);
+
+        $event = new NewGameEvent($game);
+        $listener = new GameListener();
+        $this->dispatcher->addListener(NewGameEvent::NAME, array($listener, 'onCreatedNewGameAction'));
+        $this->dispatcher->dispatch($event, NewGameEvent::NAME);
+
+
         $this->gamesService->newGame($game);
+
         return (new JsonResponse())->setContent($this->serializer->serialize($params, 'json'));
+    }
+    /**
+     * @Route("api/generate_data", name="generate_data", methods={"GET"})
+     */
+    public function generateDummyData(Request $request) : Response
+    {
+        $user = new User();
+        $user->setUsername("administrator");
+        $user->setPassword($this->passwordEncoder->encodePassword($user,"123456"));
+        $user->setRoles(["ROLE_ADMIN"]);
+        $this->gamesService->insertDummyData($user);
+        return (new JsonResponse())->setContent($this->serializer->serialize("success", 'json'));
     }
 }

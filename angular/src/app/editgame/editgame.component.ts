@@ -15,10 +15,15 @@ export class EditgameComponent implements OnInit {
   constructor(private gameService: ApigameService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.gameService.getGame("get_game", this.route.snapshot.params.id).subscribe((data: {}) => {
+    debugger;
+    this.gameService.getGame("get_game", this.route.snapshot.params.id).subscribe((data: any) => {
       console.log(data);
       this.gameData = data;
-    });
+    }, (err) => {
+      console.log(err);
+      const data = {notification : "Success!"};
+      this.router.navigate(['/home/', JSON.stringify(data)]);
+    })
   }
   updateGame(): void {
     console.log(this.gameData);

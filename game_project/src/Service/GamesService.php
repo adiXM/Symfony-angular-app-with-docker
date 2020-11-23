@@ -46,6 +46,9 @@ class GamesService
         $this->em->persist($game);
         $this->em->flush();
     }
-
+    public function insertDummyData($user){
+        $this->em->persist($user);
+        $this->em->flush();
+    }
 
 }

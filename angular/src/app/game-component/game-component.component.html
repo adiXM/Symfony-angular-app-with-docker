@@ -4,11 +4,13 @@
   <h1>{{title}}</h1>
   <div class="header">
     <div class="row">
-      <button routerLink="/login" class="btn btn-sm btn-secondary btn-default">Login</button>
       <button routerLink="/new-game" class="ml-auto btn btn-sm btn-primary btn-default">Create new game</button>
     </div>
   </div>
 
+  <div class="row">
+    <div class="alert alert-danger">{{this.notification}}</div>
+  </div>
   <div class="row">
     <div class="col-md-12">
       <div class="all-games">
@@ -36,7 +38,7 @@
             <td>
               {{game.store}}
             </td>
-            <td>5</td>
+            <td>{{game.players}}</td>
             <td>
               <button (click)="removeGame(game.id);" class="btn btn-sm btn-primary btn-default mr-1">Remove</button>
               <button routerLink="/edit-game/{{game.id}}" class="btn btn-sm btn-secondary btn-default">Edit</button>

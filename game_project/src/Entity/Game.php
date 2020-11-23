@@ -33,6 +33,11 @@ class Game
      */
     private $store;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $players;
+
 
     public function getId(): ?int
     {
@@ -71,6 +76,18 @@ class Game
     public function setStore(string $store): self
     {
         $this->store = $store;
+
+        return $this;
+    }
+
+    public function getPlayers(): ?int
+    {
+        return $this->players;
+    }
+
+    public function setPlayers(?int $players): self
+    {
+        $this->players = $players;
 
         return $this;
     }

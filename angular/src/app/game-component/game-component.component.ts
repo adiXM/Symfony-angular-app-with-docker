@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
 import {ApigameService} from "../apigame.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'game-component',
@@ -11,32 +12,21 @@ export class GameComponentComponent implements OnInit {
   public games : any = [];
   public title;
   public loadingMask;
+  public notification = '';
 
-  constructor(private gameService: ApigameService, private elRef:ElementRef) {
+  constructor(private gameService: ApigameService, private route: ActivatedRoute) {
     this.title = "Game Project"
     this.loadingMask = "hide";
+    this.notification = "success";
+    //this.route.snapshot.params['notification']
   }
 
   ngOnInit(): void {
     this.getAllGames();
   }
-  /*ngAfterViewInit() {
-    // assume dynamic HTML was added before
-    this.elRef.nativeElement.querySelector('.remove-game').addEventListener('click',
-      this.removeGame.bind(this)
-    );
-  }*/
   getAllGames(){
-    /*var item = {
-      name : "game name",
-      desc: "desc",
-      store : "store"
-    }
-    this.games.push(item);
-    this.games.push(item);*/
     this.loadingMask = "show";
     this.gameService.getAllGames("get_games").subscribe((data: any)=>{
-      console.log(data);
       this.games = data;
       this.loadingMask = "hide";
     })

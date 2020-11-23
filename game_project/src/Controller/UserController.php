@@ -9,17 +9,21 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Serializer\SerializerInterface;
+use App\Entity\User;
 
 class UserController extends AbstractController
 {
     private $security;
     private $serializer;
-    public function __construct(Security $security, SerializerInterface $serializer)
+    private $passwordEncoder;
+    public function __construct(Security $security, SerializerInterface $serializer,UserPasswordEncoderInterface $passwordEncoder)
     {
         $this->security = $security;
         $this->serializer = $serializer;
+        $this->passwordEncoder = $passwordEncoder;
     }
 
     /**
