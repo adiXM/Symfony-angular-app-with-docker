@@ -6,7 +6,7 @@ Pentru a rula proiectul trebuie rulate aceste comenzi:
 
 Pentru partea de symfony, e nevoie de adaugat dependentele astfel:
 
-Deschide CLI pentru container-ul de php si apoi ruleaza <code>composer install</code>
+Se deschide CLI pentru container-ul de php si apoi ruleaza <code>composer install</code>
   
 Ar trebui acum sa fie instalat angular : http://localhost:4200/ si symfony http://localhost
 
