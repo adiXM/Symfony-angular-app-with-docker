@@ -22,7 +22,7 @@
     <list default="true" id="4ea979bb-a85a-4cff-8c94-a3b92cb83361" name="Default Changelist" comment="test commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_project/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/game_project/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_project/src/Service/PlayersService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_project/src/Controller/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/game_project/src/Controller/GameController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +215,7 @@
       <workItem from="1605881093846" duration="24770000" />
       <workItem from="1605959122746" duration="23622000" />
       <workItem from="1606042066581" duration="41560000" />
-      <workItem from="1606123062485" duration="122000" />
+      <workItem from="1606123062485" duration="373000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1605895651429</created>
@@ -287,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606108513899</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test commit">
+      <created>1606123247194</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1606123247194</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +323,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test commit" />
     <MESSAGE value="controller actions and user service" />
     <MESSAGE value="ignore file for data directory" />
     <MESSAGE value="auth and event dispacher for update players" />
@@ -325,7 +331,8 @@
     <MESSAGE value="alert change" />
     <MESSAGE value="removed unused variable" />
     <MESSAGE value="validator" />
-    <option name="LAST_COMMIT_MESSAGE" value="validator" />
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="434" y="188" key="#Notifications" timestamp="1605353217707">

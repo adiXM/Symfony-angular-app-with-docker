@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+
+<div id="test"></div>
+
+</body>
+<script>
+
+
+function getData()
+{
+    var data = {
+        username : "user",
+        password : "123456"
+    };
+
+	$.ajax({
+        crossDomain : true,
+		type: "POST",
+		url: 'http://localhost:80/login',
+        data: JSON.stringify(data),
+        dataType: "json",
+        method: "POST"
+	}).done(function (data, textStatus, jqXHR) {
+        console.log(data, textStatus, jqXHR);
+    }).fail(function (jqXHR, textStatus, errorThrown) {
+            console.error(jqXHR, textStatus, errorThrown)
+    });
+}
+
+getData();
+</script>
+</html>
