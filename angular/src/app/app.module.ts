@@ -15,6 +15,7 @@ import { NewGameComponent } from './new-game/new-game.component';
     AppComponent,
     GameComponentComponent,
     EditgameComponent,
+    LoginComponent,
     NewGameComponent,
   ],
   imports: [
