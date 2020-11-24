@@ -54,7 +54,7 @@ services:
       - /bin/sh
       - -c
       - |
-        cd /home/node/app/frontend && npm-install && npm start
+        cd /home/node/app/frontend && npm install && npm start
     expose:
       - "4200"
 
