@@ -1,19 +1,19 @@
 # Symfony-angular-app-with-docker
 
-Pentru a rula proiectul trebuie rulate aceste comenzi:
+Some steps to run this project:
 
 <code>docker-compose up --build</code>
 
-Pentru partea de symfony, e nevoie de adaugat dependentele astfel:
+For symfony part you need to add the dependinces:
 
-Se deschide CLI pentru container-ul de php si apoi ruleaza <code>composer install</code>
+Run <code>composer install</code> in php container
   
-Ar trebui acum sa fie instalat angular : http://localhost:4200/ si symfony http://localhost
+Now you have angular: http://localhost:4200/ and symfony http://localhost
 
-Tot in containerul de php trebuie rulat <code> php bin/console doctrine:database:create</code> si <code>php bin/console doctrine:migrations:migrate</code> pentru a genera baza de date si tabelele aferente.
+Run this <code> php bin/console doctrine:database:create</code> and <code>php bin/console doctrine:migrations:migrate</code> in php container to generate the database and the tables
 
-Pentru generarea unui cont de administrator, rulam <code>http://localhost/api/generate_data</code>
+To create an admin user  <code>http://localhost/api/generate_data</code>
 
-Va fi generat un cont cu username: administrator si password: 123456
+Then you will have an admin account with username: administrator and password: 123456
 
-Apoi logarea se poate face prin <code>http://localhost/login?username=administrator&password=123456</code>
+To login <code>http://localhost/login?username=administrator&password=123456</code>
